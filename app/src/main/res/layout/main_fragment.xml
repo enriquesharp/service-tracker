@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mainTabBoxContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_gray">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:background="@color/transparent_light_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/mainTabBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/mainTabBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/eventBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_tab_box_selector">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/eventId"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/event_icon_selector" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/notificationBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_tab_box_selector">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/notificationId"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/notification_box_selector" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/messageBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_tab_box_selector">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/messageId"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/message_box_selector" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/userBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_tab_box_selector">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/userId"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/user_box_selector" />
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <com.tracker.service.servicetrakcer.view.custom.NonSwipeableViewPager
+        android:id="@+id/mainViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTabBoxContainer" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black_dark"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/botomLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLine">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageType"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/business_icon" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/nameTv"
+            style="@style/CustomTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="5dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Titulo del evento"
+            android:textSize="@dimen/normal_text"
+            app:layout_constraintEnd_toStartOf="@+id/timeBox"
+            app:layout_constraintStart_toEndOf="@+id/imageType" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/addressIcon"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toEndOf="@+id/imageType"
+            app:layout_constraintTop_toBottomOf="@+id/nameTv"
+            app:srcCompat="@drawable/place_icon" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/addressTv"
+            style="@style/CustomTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Titulo del evento"
+            android:textSize="@dimen/normal_text"
+            app:layout_constraintEnd_toStartOf="@+id/timeBox"
+            app:layout_constraintStart_toEndOf="@+id/addressIcon"
+            app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/timeBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/directionsWalkIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/timeIcon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                app:srcCompat="@drawable/replay_icon" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/timeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/calibri_bold"
+                android:gravity="center"
+                android:text="10"
+                android:textSize="@dimen/small_text"
+                app:layout_constraintBottom_toBottomOf="@+id/timeIcon"
+                app:layout_constraintEnd_toEndOf="@+id/timeIcon"
+                app:layout_constraintStart_toStartOf="@+id/timeIcon"
+                app:layout_constraintTop_toTopOf="@+id/timeIcon" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/directionsWalkIcon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/moreIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/directions_walk_icon" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/moreIcon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/more_vert_icon" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/botomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black_dark"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>

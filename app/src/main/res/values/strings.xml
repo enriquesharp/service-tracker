@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ServiceTrakcer</string>
+
+
+    <string name="daily_text">DAILY</string>
+    <string name="monthly_text">MONTHLY</string>
+    <string name="undefined_text">N/D</string>
+    <string name="all_text">All</string>
+    <string name="unassigned_text">Unassigned</string>
+    <string name="assigned_text">Assigned</string>
+    <string name="create_new_text">Create new</string>
+
+</resources>

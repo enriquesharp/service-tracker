@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scheduleTabBoxContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/light_gray">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@color/transparent_light_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/scheduleTabBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/scheduleTabBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/dailyBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/dailyTitle"
+                    style="@style/CustomTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/daily_text"
+                    android:textSize="@dimen/large_text"
+                    app:layout_constraintBottom_toTopOf="@+id/dailyDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/dailyDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/green"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/dailySubTitle"
+                    style="@style/CustomTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="March 2018"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dailyDivider" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/monthlyBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/monthlyTitle"
+                    style="@style/CustomTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/monthly_text"
+                    android:textSize="@dimen/large_text"
+                    app:layout_constraintBottom_toTopOf="@+id/monthlyDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/monthlyDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/green"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/monthlySubTitle"
+                    style="@style/CustomTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="2018"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/monthlyDivider" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/undefinedBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/undefinedTitle"
+                    style="@style/CustomTextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/undefined_text"
+                    android:textSize="@dimen/large_text"
+                    app:layout_constraintBottom_toTopOf="@+id/undefinedDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/undefinedDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/green"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <com.tracker.service.servicetrakcer.view.custom.NonSwipeableViewPager
+        android:id="@+id/scheduleViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleTabBoxContainer" />
+
+</android.support.constraint.ConstraintLayout>
