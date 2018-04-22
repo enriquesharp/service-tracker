@@ -15,5 +15,31 @@
     <string name="time_to_start_text">Faltan</string>
     <string name="time_to_start_text1">Horas para Inicar Tarea</string>
     <string name="confirm_start_going_travel_text">Confirma que vas a iniciar el viaje de ida hacia</string>
+    <string name="action_end_going_task_text">Finalizar Viaje de Ida</string>
+    <string name="action_start_task_text">Iniciar Tarea</string>
+    <string name="action_report_issue_text">Reportar Incidencia</string>
+    <string name="action_task_detail_text">Detalles de la Tarea</string>
+    <string name="action_document_text">Documentar</string>
+    <string name="action_start_pause_text">Iniciar Receso</string>
+    <string name="action_start_service_travel_text">Iniciar viaje de servicio</string>
+    <string name="action_report_temp_text">Reporte (Borrador)</string>
+    <string name="action_end_task_text">Finalizar Tarea</string>
+    <string name="action_service_resume_text">Resumen de Servicio</string>
+    <string name="action_end_pause_text">Finalizar Receso</string>
+    <string name="action_service_report_text">Reporte de Servicio</string>
+    <string name="action_start_coming_back_travel_text">Iniciar viaje de regreso</string>
+    <string name="action_coming_back_travel_ended_text">Viaje de Regreso Finalizado</string>
+
+    <string name="status_going_travel_started_text">Viaje de Ida Iniciado</string>
+    <string name="status_going_travel_ended_text">Viaje de Ida Finalizado</string>
+    <string name="status_in_process_task_text">Tarea en proceso</string>
+    <string name="status_in_pause_task_text">En Receso</string>
+    <string name="status_ended_task_text">Tarea Finalizada</string>
+    <string name="status_coming_back_travel_started_text">Viaje de Regreso Iniciado</string>
+    <string name="status_ended_task_but_text">Tarea Finalizada, pero...</string>
+    <string name="status_ended_task_but_subtitle_text">Aún nos queda un importante detalle a completar!</string>
+    <string name="nice_job_text">Excelente Trabajo</string>
+    <string name="back_to_my_pending_tasks_text">Volver a Mis Tareas Pendientes</string>
+    <string name="accomplish_task_text">Tarea cumplida!</string>
 
 </resources>

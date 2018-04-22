@@ -58,7 +58,7 @@ class EventDetailFragment : BaseFragment() {
 
     private fun setupView() {
         activity?.let { act ->
-            val ft = act.supportFragmentManager.beginTransaction()
+            val ft = childFragmentManager.beginTransaction()
             ft.replace(eventDetailContentBox.id, if (currentView == CURRENT_VIEW.MAP) mapFragment else eventLifeCycleFragment)
             ft.commit()
         }

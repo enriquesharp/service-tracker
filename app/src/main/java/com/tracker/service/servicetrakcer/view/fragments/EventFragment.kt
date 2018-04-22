@@ -74,12 +74,12 @@ class EventFragment : BaseFragment() {
 
     private fun setupView() {
         activity?.let { act ->
-            eventViewPager.adapter = MainPagerAdapter(act.supportFragmentManager, listOf(dailyFragment, monthlyFragment, undefinedFragment))
+            eventViewPager.adapter = MainPagerAdapter(childFragmentManager, listOf(dailyFragment, monthlyFragment, undefinedFragment))
             setViewPagerPage(1)
 
-            val ft = act.supportFragmentManager.beginTransaction()
+            val ft = childFragmentManager.beginTransaction()
             ft.replace(eventDetailContainer.id, eventDetailFragment)
-            ft.commit()
+            ft.commitNow()
         }
     }
 

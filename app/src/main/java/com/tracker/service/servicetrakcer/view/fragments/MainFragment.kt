@@ -82,7 +82,7 @@ class MainFragment : BaseFragment() {
     fun setupView() {
         Log.e("setupView", "MainFragment Activity == ${activity != null}")
         activity?.let { act ->
-            mainViewPager.adapter = MainPagerAdapter(act.supportFragmentManager, listOf(eventFragment, notificationFragment, messageFragment, userFragment))
+            mainViewPager.adapter = MainPagerAdapter(childFragmentManager, listOf(eventFragment, notificationFragment, messageFragment, userFragment))
             setViewPagerPage(0)
             mainViewPager.offscreenPageLimit = 3
 
