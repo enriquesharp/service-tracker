@@ -1,6 +1,9 @@
 package com.tracker.service.servicetrakcer.view.fragments
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +31,33 @@ class MainFragment : BaseFragment() {
         setupView()
 
         initViewClickListeners()
+
+    }
+
+    override fun onBackPressed(): Boolean {
+        when (mainViewPager.currentItem) {
+            0 -> {
+                return eventFragment.onBackPressed()
+            }
+            1 -> {
+                if (notificationFragment.onBackPressed())
+                    setViewPagerPage(0)
+                return false
+            }
+            2 -> {
+                if (messageFragment.onBackPressed())
+                    setViewPagerPage(0)
+                return false
+            }
+            3 -> {
+                if (userFragment.onBackPressed())
+                    setViewPagerPage(0)
+                return false
+            }
+            else -> {
+                return super.onBackPressed()
+            }
+        }
     }
 
     private fun initViewClickListeners() {
@@ -49,11 +79,13 @@ class MainFragment : BaseFragment() {
         }
     }
 
-    private fun setupView() {
+    fun setupView() {
+        Log.e("setupView", "MainFragment Activity == ${activity != null}")
         activity?.let { act ->
             mainViewPager.adapter = MainPagerAdapter(act.supportFragmentManager, listOf(eventFragment, notificationFragment, messageFragment, userFragment))
             setViewPagerPage(0)
             mainViewPager.offscreenPageLimit = 3
+
         }
     }
 

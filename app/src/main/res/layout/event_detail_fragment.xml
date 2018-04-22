@@ -2,24 +2,17 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/event_info_height">
-
-    <View
-        android:id="@+id/topLine"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/black_dark"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/eventItemContainer"
+        android:id="@+id/eventDetailHeaderBox"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/event_info_height"
+        android:background="@drawable/rectangle_border_shape"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topLine">
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/imageType"
@@ -117,10 +110,13 @@
             app:srcCompat="@drawable/more_vert_icon" />
     </android.support.constraint.ConstraintLayout>
 
-    <View
-        android:id="@+id/bottomLine"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/black_dark"
-        app:layout_constraintBottom_toBottomOf="parent" />
+    <FrameLayout
+        android:id="@+id/eventDetailContentBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventDetailHeaderBox" />
+
 </android.support.constraint.ConstraintLayout>

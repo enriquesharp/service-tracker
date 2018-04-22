@@ -2,6 +2,8 @@
     <string name="app_name">ServiceTrakcer</string>
 
 
+    <string name="start_text">Iniciar</string>
+    <string name="cancel_text">Cancelar</string>
     <string name="daily_text">DAILY</string>
     <string name="monthly_text">MONTHLY</string>
     <string name="undefined_text">N/D</string>
@@ -9,5 +11,9 @@
     <string name="unassigned_text">Unassigned</string>
     <string name="assigned_text">Assigned</string>
     <string name="create_new_text">Create new</string>
+    <string name="init_going_travel_text">Iniciar Viaje de Ida</string>
+    <string name="time_to_start_text">Faltan</string>
+    <string name="time_to_start_text1">Horas para Inicar Tarea</string>
+    <string name="confirm_start_going_travel_text">Confirma que vas a iniciar el viaje de ida hacia</string>
 
 </resources>

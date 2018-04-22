@@ -19,6 +19,11 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventHolder>() {
     private val ctx by inject<Application>()
     var eventList: List<EventModel> = listOf()
 
+    private var onItemSelected: ((model: EventModel) -> Unit)? = null
+    fun onItemSelectedFun(onItemSelectedFun: ((model: EventModel) -> Unit)?) {
+        onItemSelected = onItemSelectedFun
+    }
+
     fun setData(list: List<EventModel>) {
         eventList = list
         eventList = listOf(
@@ -35,6 +40,7 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventHolder>() {
     override fun onBindViewHolder(holder: EventHolder, position: Int) {
         val model = eventList[position]
         holder.itemView?.let { v ->
+            v.topLine.visibility = if(holder.adapterPosition == 0) View.INVISIBLE else View.VISIBLE
             v.nameTv.text = model.name
             v.imageType.setImageResource(when (model.type) {
                 EVENT_TYPE.BUSSINESS -> R.drawable.business_icon
@@ -43,6 +49,9 @@ class EventAdapter : RecyclerView.Adapter<EventAdapter.EventHolder>() {
             })
             v.addressTv.text = model.address
             v.timeTv.text = "${model.time}"
+            v.eventItemContainer.setOnClickListener {
+                onItemSelected?.invoke(model)
+            }
         }
     }
 

@@ -4,11 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/eventsRv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/CustomTextViewStyle"
+        android:text="Event lifecycle Fragment"/>
 
 </android.support.constraint.ConstraintLayout>
